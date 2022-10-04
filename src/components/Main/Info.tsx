@@ -6,7 +6,7 @@ import { VscGist } from "react-icons/vsc";
 
 const Info = () => {
   const {user}=useAppSelector(state=>state.user)
-  console.log(user);
+  // console.log(user);
   const {public_repos,public_gists,followers,following}=user
   return (
     <div className='container m-auto flex flex-wrap gap-5 justify-center items-center my-4'>
