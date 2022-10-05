@@ -19,10 +19,10 @@ const UserInfo = () => {
         <a href={html_url} target="_blank" className='text-3xl text-orange-600'><CgArrowTopRightR/></a>
       </article>
       <article className='p-4 flex flex-col gap-1 w-7/12 lg:w-4/12 shadow-2xl bg-emerald-100'>
-        <div className='flex items-center justify-start gap-x-4 px-3'><ImOffice className='text-3xl text-blue-400'/>{company ? company : "Open To Work"}</div>
+        <div className='flex items-center justify-start gap-x-4 px-3'><ImOffice className='text-3xl text-red-400'/>{company ? company : "Open To Work"}</div>
         <div className='flex items-center justify-start gap-x-4 px-3'><ImLocation2 className='text-3xl text-blue-400'/>{location ? location : "Not Certain"}</div>
         <div >
-          <a href={blog ? blog : "#"} target="_blank" className='flex items-center justify-start gap-x-4 px-3'><ImLink className='text-3xl text-blue-400'/> <span className='hidden md:inline-block'>{blog ? blog : "Not Certain"}</span> <span className='md:hidden'>Portfolio</span></a>
+          <a href={blog ? blog : "#"} target="_blank" className='flex items-center justify-start gap-x-4 px-3'><ImLink className='text-3xl text-slate-400'/> <span className='hidden md:inline-block'>{blog ? blog : "Not Certain"}</span> <span className='md:hidden'>Portfolio</span></a>
           </div>
       </article>
     </section>
