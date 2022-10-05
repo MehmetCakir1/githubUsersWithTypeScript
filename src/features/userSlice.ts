@@ -8,8 +8,6 @@ const initialState:IStateProps={
     user:<IUserProps>{},
     loading:false,
     error:"",
-    
-
 }
 
 export const getUser = createAsyncThunk(
