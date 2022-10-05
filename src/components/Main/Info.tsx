@@ -9,7 +9,7 @@ const Info = () => {
   // console.log(user);
   const {public_repos,public_gists,followers,following}=user
   return (
-    <div className='container m-auto flex flex-wrap gap-5 justify-center items-center my-4'>
+    <div className='container m-auto flex flex-wrap gap-5 justify-center items-center mb-4'>
       <div className='flex gap-5 justify-center items-center'>
       <div className='flex items-center justify-center gap-x-4 w-[150px] py-3 font-semibold shadow-2xl bg-blue-100 rounded-lg'><RiGitRepositoryFill className='text-5xl text-red-500 bg-red-200 rounded-full p-2'/>
       <div>

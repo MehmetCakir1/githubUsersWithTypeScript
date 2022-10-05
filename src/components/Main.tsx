@@ -12,7 +12,7 @@ const Main = () => {
   }
 
   return (
-    <main>
+    <main className='bg-slate-200 py-8'>
       {
         user.login ?
         <>

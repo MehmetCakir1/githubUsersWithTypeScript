@@ -9,9 +9,9 @@ const SearchForm = () => {
   const dispatch=useAppDispatch()
   // console.log(searchTerm)
   return (
-    <div>
+    <div className="bg-slate-200">
       <h1 className="text-center text-3xl font-semibold py-3">GITHUB USERS</h1>
-      <div className="flex items-center w-full max-w-lg m-auto px-1 py-2 bg-yellow-200">
+      <div className="flex items-center w-full max-w-lg m-auto px-2 py-2 bg-blue-300">
         <div className="flex justify-center items-center py-1 mr-2 w-full">
         <MdOutlineSearch className="text-3xl" />
         <input type="search" className="p-1 w-full outline-none text-xl"
