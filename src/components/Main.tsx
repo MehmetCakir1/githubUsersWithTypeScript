@@ -5,6 +5,7 @@ import UserInfo from './Main/UserInfo'
 
 const Main = () => {
   const { user,loading,error } = useAppSelector(state => state.user)
+  
 
   if(loading){
     return <img  className="block m-auto" src="images/spinner.gif" alt="loading-spinner" />

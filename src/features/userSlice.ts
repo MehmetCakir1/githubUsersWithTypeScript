@@ -4,6 +4,7 @@ import { IUserProps,IStateProps } from "../types/interfaces";
 
 
 const initialState:IStateProps={
+    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
     user:<IUserProps>{},
     loading:false,
     error:"",
@@ -15,7 +16,7 @@ export const getUser = createAsyncThunk(
     'user/getUser', async(searchTerm:string) => {
         return fetch( `https://api.github.com/users/${searchTerm}`)
         .then(res=>{
-            return res.json()
+            return res.ok ? res.json() : res.ok
         })
     }
 )
@@ -37,11 +38,15 @@ const userSlice = createSlice({
             if(action.payload){
                 state.user=action.payload
             }else{
-                state.error="User Not Found"
+                state.error='User Not Found'
+                // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+                state.user = <IUserProps>{}
             }
         })
         builder.addCase(getUser.rejected,(state:IStateProps)=>{
             state.loading=false;
+            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+            state.user = <IUserProps>{};
             state.error="An Error Occured"
         })
     }
