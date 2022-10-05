@@ -41,7 +41,7 @@ const Pie:FC<IPieProps> = ({data}) => {
       };
 
       return (
-        <div className='bg-white rounded-md  shadow-lg mb-6 w-5/12'>
+        <div className='bg-white rounded-md  shadow-lg mb-6 w-[90%] md:w-5/12'>
           <ReactFC {...chartConfigs} />
         </div>
       )

@@ -30,13 +30,16 @@ const Doughnut:FC<IPieProps> = ({data}) => {
             paletteColors:
               " #F2726F,#ecae10,#2caeba, #5D62B5,  #35e91d, #6E80CA ,#8d6e63,",
             showHoverEffect : 1,
+            pieRadius: "50%",
+            animation: 1,
+            pieYScale: 70,
           },
           data,
         },
       };
 
       return (
-        <div className='bg-white rounded-md  mb-6 w-5/12 '>
+        <div className='bg-white rounded-md  mb-6 w-[90%] md:w-5/12 '>
           <ReactFC {...chartConfigs} />
         </div>
       )

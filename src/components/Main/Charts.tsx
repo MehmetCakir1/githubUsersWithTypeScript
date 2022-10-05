@@ -79,8 +79,8 @@ const Charts = () => {
      }).slice(0, 5)
 
   return (
-    <div className='container m-auto'>
-      <div className='flex justify-center items-center gap-9'>
+    <div >
+      <div className='flex flex-col lg:flex-row justify-center items-center gap-9'>
       <Pie data={pieChartData}/>
       <Doughnut data={doughnutChartData}/>
       </div>
