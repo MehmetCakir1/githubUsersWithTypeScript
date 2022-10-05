@@ -11,29 +11,24 @@ interface IPieProps {
     data: IData[]
   } 
 
-const Pie:FC<IPieProps> = ({data}) => {
+const Doughnut:FC<IPieProps> = ({data}) => {
    
     const chartConfigs = {
-        type: "pie3d", 
+        type: "doughnut2d", 
         width: "100%", 
         height: "400", 
         dataFormat: "json", 
         dataSource: {
           chart: {
-            caption: "Most Used Languages",
+            caption: "Stars Per Language",
+            yaxisname: "Stars",
+            xaxisname: "Repos",
+            showvalues: "1",
             captionFontColor: "#102a42",
             captionFontSize: 20,
             baseFontSize: 16,
-            baseFontColor: "#3289da",
-            smartLineColor: "#3289da",
             paletteColors:
-              "#2caeba, #5D62B5, #ecae10, #F2726F,  #35e91d, #6E80CA ,#8d6e63,",
-            use3DLighting: 1,
-            useDataPlotColorForLabels: 1,
-            decimals: 0,
-            pieRadius: "50%",
-            animation: 1,
-            pieYScale: 70,
+              " #F2726F,#ecae10,#2caeba, #5D62B5,  #35e91d, #6E80CA ,#8d6e63,",
             showHoverEffect : 1,
           },
           data,
@@ -41,10 +36,10 @@ const Pie:FC<IPieProps> = ({data}) => {
       };
 
       return (
-        <div className='bg-white rounded-md  shadow-lg mb-6 w-5/12'>
+        <div className='bg-white rounded-md  mb-6 w-5/12 '>
           <ReactFC {...chartConfigs} />
         </div>
       )
 }
 
-export default Pie
+export default Doughnut

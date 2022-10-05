@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAppSelector } from '../app/hooks'
 import Charts from './Main/Charts'
 import Info from './Main/Info'
@@ -12,7 +11,7 @@ const Main = () => {
   }
 
   return (
-    <main className='bg-slate-200 py-8'>
+    <main className='bg-slate-200 py-8 min-h-[calc(100vh-120px)]'>
       {
         user.login ?
         <>
